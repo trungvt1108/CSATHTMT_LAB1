@@ -1,0 +1,103 @@
+{
+  "he_thong": "Trang bán hàng trực tuyến",
+  "thanh_phan": [
+    {
+      "ten": "Trình duyệt",
+      "vai_tro": "Giao diện để khách hàng xem sản phẩm, gửi yêu cầu và nhận hiển thị từ máy chủ"
+    },
+    {
+      "ten": "Máy chủ ứng dụng",
+      "vai_tro": "Xử lý logic nghiệp vụ, xác thực người dùng, phân quyền và kết nối cơ sở dữ liệu"
+    },
+    {
+      "ten": "Cơ sở dữ liệu",
+      "vai_tro": "Lưu trữ toàn bộ thông tin nhạy cảm của tài khoản, mật khẩu và lịch sử đơn hàng"
+    }
+  ],
+  "moi_de_doa": [
+    {
+      "ma": "M01",
+      "phat_bieu": "Một người dùng đã đăng nhập với vai trò khách hàng đọc được bảng đơn hàng của khách hàng khác nếu ứng dụng không lọc truy cập theo mã tài khoản người dùng.",
+      "nguyen_ly": 1,
+      "attack": "T1190",
+      "tac_dong": 4,
+      "kha_nang": 4
+    },
+    {
+      "ma": "M02",
+      "phat_bieu": "Kẻ tấn công trích xuất được toàn bộ danh sách tài khoản quản trị khi ứng dụng không làm sạch dữ liệu đầu vào tại ô tìm kiếm sản phẩm gây ra lỗi SQL Injection.",
+      "nguyen_ly": 1,
+      "attack": "T1190",
+      "tac_dong": 5,
+      "kha_nang": 3
+    },
+    {
+      "ma": "M03",
+      "phat_bieu": "Kẻ tấn công dò đoán thành công mật khẩu của tài khoản quản trị trong trường hợp máy chủ không giới hạn số lần đăng nhập sai liên tiếp vào hệ thống.",
+      "nguyen_ly": 7,
+      "attack": "T1110",
+      "tac_dong": 5,
+      "kha_nang": 4
+    },
+    {
+      "ma": "M04",
+      "phat_bieu": "Mã độc JavaScript sẽ thực thi trên trình duyệt của người dùng khác nếu hệ thống cho phép chèn mã HTML trực tiếp vào phần bình luận đánh giá sản phẩm.",
+      "nguyen_ly": 2,
+      "attack": "T1059.007",
+      "tac_dong": 3,
+      "kha_nang": 4
+    },
+    {
+      "ma": "M05",
+      "phat_bieu": "Kẻ tấn công chiếm quyền điều khiển tài khoản của người mua hàng khi cookie phiên đăng nhập không được thiết lập các thuộc tính an toàn HttpOnly và Secure.",
+      "nguyen_ly": 2,
+      "attack": "T1539",
+      "tac_dong": 4,
+      "kha_nang": 3
+    },
+    {
+      "ma": "M06",
+      "phat_bieu": "Khách hàng có thể mua sản phẩm với giá bằng không nếu hệ thống không kiểm tra lại tính hợp lệ của giá trị đơn hàng ở phía máy chủ trước khi thanh toán.",
+      "nguyen_ly": 1,
+      "attack": "T1190",
+      "tac_dong": 4,
+      "kha_nang": 2
+    },
+    {
+      "ma": "M07",
+      "phat_bieu": "Kẻ tấn công truy cập thẳng vào cơ sở dữ liệu nếu mật khẩu kết nối mặc định của hệ quản trị cơ sở dữ liệu không được thay đổi khi đưa vào vận hành.",
+      "nguyen_ly": 4,
+      "attack": "T1078",
+      "tac_dong": 5,
+      "kha_nang": 2
+    },
+    {
+      "ma": "M08",
+      "phat_bieu": "Dịch vụ web sẽ ngừng phản hồi yêu cầu của khách hàng thật trong trường hợp kẻ tấn công gửi hàng ngàn truy vấn nặng tới máy chủ cùng một lúc gây quá tải.",
+      "nguyen_ly": 7,
+      "attack": "T1498",
+      "tac_dong": 3,
+      "kha_nang": 4
+    }
+  ],
+  "chon_xu_ly": [
+    {
+      "ma": "M03",
+      "chi_phi": 5,
+      "don_vi": "giờ công",
+      "can_cu": "Ước lượng thời gian kỹ sư cài đặt và cấu hình thư viện Rate Limit để chống Brute Force trên máy chủ web"
+    },
+    {
+      "ma": "M01",
+      "chi_phi": 15,
+      "don_vi": "giờ công",
+      "can_cu": "Thời gian lập trình viên rà soát và viết thêm hàm kiểm tra quyền IDOR cho khoảng 10 API liên quan đến đơn hàng"
+    },
+    {
+      "ma": "M02",
+      "chi_phi": 20,
+      "don_vi": "giờ công",
+      "can_cu": "Ước lượng thời gian chuyển đổi toàn bộ câu lệnh SQL truy vấn thô sang dùng Prepared Statements trong mã nguồn"
+    }
+  ]
+}
