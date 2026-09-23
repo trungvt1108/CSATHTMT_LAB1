@@ -13,6 +13,9 @@
 # digest thật, rồi xóa dòng chú thích ngay bên dưới.
 services:
   preflight:
+    # CHUA_GHIM_DIGEST: thẻ alpine:3.22, chờ ghim-digest.sh thay bằng digest.
+    # Mức phiên bản của thẻ cũng chưa đối chiếu với sổ đăng ký vì cùng lý do;
+    # ghim-digest.sh dừng và nói rõ nếu thẻ này không tồn tại.
     image: alpine:3.22
     container_name: css-s01-preflight
     command: >
